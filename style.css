@@ -1,0 +1,244 @@
+:root {
+    /* Colors */
+    /* Primary */
+    --blue-500: hsl(223, 87%, 63%);
+
+    /* Secondary */
+    --blue-200: hsl(223, 100%, 88%);
+    --red-400: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --gray-400: hsl(0, 0%, 59%);
+    --blue-950: hsl(209, 33%, 12%);
+
+    /* Typography */
+    /* Fonts */
+    --font-family: "Libre Franklin";
+    --font-weight-300: 300;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    font-family: var(--font-family);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.ping {
+    text-align: center;
+    padding: 30px;
+}
+
+@media (max-width: 767px) {
+    .ping {
+        padding: 0;
+    }
+}
+
+.ping .container .logo {
+    margin: 30px 0 60px;
+}
+
+.ping .container .logo img {
+    max-width: 100%;
+}
+
+.ping .container .subscribe h1 {
+    color: var(--gray-400);
+    font-weight: var(--font-weight-300);
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .ping .container .subscribe h1 {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+}
+
+.ping .container .subscribe h1 span {
+    color: black;
+    font-weight: var(--font-weight-700);
+}
+
+.ping .container .subscribe p {
+    color: var(--blue-950);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 767px) {
+    .ping .container .subscribe p {
+        font-size: .8em;
+    }
+}
+
+.ping .container .subscribe .notify-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.ping .container .subscribe .notify-me input[type='email'] {
+    flex-basis: 50%;
+    margin-right: 25px;
+    border: 1px solid var(--blue-200);
+    padding: 15px;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    padding-left: 30px;
+}
+
+@media (max-width: 767px) {
+    .ping .container .subscribe .notify-me input[type='email'] {
+        flex-basis: 100%;
+        margin: 0 0 20px;
+    }
+}
+
+.ping .container .subscribe .notify-me input[type='email'].error {
+    border-color: red;
+}
+
+.ping .container .subscribe .notify-me input[type='email']::placeholder {
+    color: var(--gray-400);
+    opacity: .6;
+}
+
+.ping .container .subscribe .notify-me p.error {
+    color: var(--red-400);
+    order: 3;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    left: 17%;
+    top: 10px;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .ping .container .subscribe .notify-me p.error {
+        order: 0;
+        top: -10px;
+        left: 0;
+        text-align: center;
+    }
+}
+
+.ping .container .subscribe .notify-me input[type='submit'] {
+    flex-basis: 20%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--blue-500);
+    color: white;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-600);
+    padding: 15px;
+}
+
+@media (max-width: 767px) {
+    .ping .container .subscribe .notify-me input[type='submit'] {
+        flex-basis: 100%;
+    }
+}
+
+.ping .container .subscribe .notify-me input[type='submit']:hover {
+    background-color: var(--blue-200);
+}
+
+.ping .container .dashboard {
+    margin-top: 100px;
+}
+
+.ping .container .dashboard img {
+    width: 900px;
+    height: 600px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .ping .container .dashboard img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.ping .container .social {
+    margin: 25px 0;
+}
+
+.ping .container .social i {
+    color: var(--blue-500);
+    font-weight: var(--font-weight-700);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.ping .container .social i:hover {
+    cursor: pointer;
+    background-color: var(--blue-500);
+    color: white;
+}
+
+.ping .container .social i:nth-child(2) {
+    margin: 0 30px;
+}
+
+.ping .container .footer {
+    color: var(--gray-400);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
